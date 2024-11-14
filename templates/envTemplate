@@ -1,7 +1,7 @@
-PORT=3030
-HOST=localhost
-USER=root
-DB_MG=attendance_lite_management
-DB_MO=attendance_lite_module
-PASSWORD=88888888
-SECRETKEY=TEST123
+PORT=
+HOST=
+USER=
+DB_MG=
+DB_MO=
+PASSWORD=
+SECRETKEY=
