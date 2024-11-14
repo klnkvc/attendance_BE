@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JetClientState">
+    <option name="draftsState">
+      <draftsState>
+        <option name="requests">
+          <list>
+            <requestState>
+              <option name="id" value="c9d15844-0ed1-4fb2-85f4-2e93c7d265a4" />
+              <option name="method" value="GET" />
+              <option name="name" value="Get Check" />
+              <option name="url" value="http://localhost:3000/" />
+            </requestState>
+            <requestState>
+              <option name="id" value="62eb4dd6-a3aa-4131-94a2-ef36b6831d26" />
+              <option name="method" value="GET" />
+              <option name="name" value="DB Check" />
+              <option name="url" value="http://localhost:3000/api/v1/login" />
+            </requestState>
+          </list>
+        </option>
+      </draftsState>
+    </option>
+    <option name="environmentGroups">
+      <list>
+        <environmentGroupState>
+          <option name="environments">
+            <list>
+              <environmentState>
+                <option name="id" value="local" />
+                <option name="name" value="Local" />
+              </environmentState>
+            </list>
+          </option>
+          <option name="id" value="attendance" />
+          <option name="name" value="Attendance" />
+        </environmentGroupState>
+      </list>
+    </option>
+    <option name="folders">
+      <list>
+        <folderState>
+          <option name="id" value="a200eca2-16b2-4864-af7d-ea5375f29532" />
+          <option name="name" value="Attendance" />
+          <option name="sortWeight" value="1000000" />
+          <option name="syncProperties">
+            <synchronizationPropertiesState>
+              <option name="folderPath" value="E:\Infinite Learning\Internal Development\Attendance\attendance_backend\.jetclient" />
+            </synchronizationPropertiesState>
+          </option>
+        </folderState>
+      </list>
+    </option>
+    <option name="id" value="496816ec-4d0f-47a5-92b1-7f1a3c26db71" />
+    <option name="selectedEnvironmentIds">
+      <set>
+        <option value="local" />
+      </set>
+    </option>
+  </component>
+</project>
