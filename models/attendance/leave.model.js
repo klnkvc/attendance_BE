@@ -38,7 +38,7 @@ const leave = {
     AllLeave : async (data)=>{
         const {month, year}=data
         try{
-            return await query("SELECT `leave`.id, u.name, u.phone_number AS phoneNumber, destination_city AS destinationCity, destination_address AS destinationAddress, DATE_FORMAT(start_date, '%W, %d-%m-%Y') AS startDate, DATE_FORMAT(work_date, '%W, %d-%m-%Y') AS workDate, approval, DATE_FORMAT(`leave`.created_at, '%W, %d-%m-%Y')  AS requestDate FROM `leave` LEFT JOIN attendance_lite_management.users u on u.id = `leave`.user_id WHERE leave_type_id = 1 AND ((MONTH(`leave`.created_at) = ? AND YEAR(`leave`.created_at) = ?) OR (MONTH(start_date) = ? AND YEAR(start_date) = ?) OR (MONTH(work_date) = ? AND YEAR(work_date) = ?))ORDER BY start_date DESC;",
+            return await query("SELECT `leave`.id, u.name, u.phone_number AS phoneNumber, destination_city AS destinationCity, destination_address AS destinationAddress, DATE_FORMAT(start_date, '%W, %d-%m-%Y') AS startDate, DATE_FORMAT(work_date, '%W, %d-%m-%Y') AS workDate, approval, DATE_FORMAT(`leave`.created_at, '%W, %d-%m-%Y')  AS requestDate FROM `leave` LEFT JOIN users u on u.id = `leave`.user_id WHERE leave_type_id = 1 AND ((MONTH(`leave`.created_at) = ? AND YEAR(`leave`.created_at) = ?) OR (MONTH(start_date) = ? AND YEAR(start_date) = ?) OR (MONTH(work_date) = ? AND YEAR(work_date) = ?))ORDER BY start_date DESC;",
                 [month, year, month, year, month, year])
         }catch (e) {
             throw e
@@ -47,7 +47,7 @@ const leave = {
     AllSick : async (data)=>{
         const {month, year}=data
         try{
-            return await query("SELECT `leave`.id, u.name, u.phone_number AS phoneNumber, `desc`, evidence, DATE_FORMAT(start_date, '%W, %d-%m-%Y') AS startDate, DATE_FORMAT(work_date, '%W, %d-%m-%Y') AS workDate, approval, DATE_FORMAT(`leave`.created_at, '%W, %d-%m-%Y')  AS requestDate FROM `leave` LEFT JOIN attendance_lite_management.users u on u.id = `leave`.user_id WHERE leave_type_id = 2 AND ((MONTH(`leave`.created_at) = ? AND YEAR(`leave`.created_at) = ?) OR (MONTH(start_date) = ? AND YEAR(start_date) = ?) OR (MONTH(work_date) = ? AND YEAR(work_date) = ?))ORDER BY start_date DESC",
+            return await query("SELECT `leave`.id, u.name, u.phone_number AS phoneNumber, `desc`, evidence, DATE_FORMAT(start_date, '%W, %d-%m-%Y') AS startDate, DATE_FORMAT(work_date, '%W, %d-%m-%Y') AS workDate, approval, DATE_FORMAT(`leave`.created_at, '%W, %d-%m-%Y')  AS requestDate FROM `leave` LEFT JOIN users u on u.id = `leave`.user_id WHERE leave_type_id = 2 AND ((MONTH(`leave`.created_at) = ? AND YEAR(`leave`.created_at) = ?) OR (MONTH(start_date) = ? AND YEAR(start_date) = ?) OR (MONTH(work_date) = ? AND YEAR(work_date) = ?))ORDER BY start_date DESC",
                 [month, year, month, year, month, year])
         }catch (e) {
             throw e

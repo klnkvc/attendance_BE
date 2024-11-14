@@ -80,7 +80,7 @@ const teams = {
     userWorkLocation:async (data)=>{
         const {employeeId}=data
         try {
-            return await query('SELECT u.id, wl.id, wl.name FROM users u LEFT JOIN attendance_lite_management.work_location wl on wl.id = u.work_location_id WHERE u.id=?', [employeeId])
+            return await query('SELECT u.id, wl.id, wl.name FROM users u LEFT JOIN work_location wl on wl.id = u.work_location_id WHERE u.id=?', [employeeId])
         }catch (e) {
             throw e
         }

@@ -22,7 +22,7 @@ const wfh = {
     allHistory:async (data)=>{
         const {month, year}=data
         try {
-            return await query("SELECT wfh.id, u.name, u.phone_number AS phoneNumber, DATE_FORMAT(date, '%W, %d-%m-%Y') AS date, date AS sort, location, approval FROM wfh LEFT JOIN attendance_lite_management.users u on u.id = wfh.user_id WHERE MONTH(date) = ? AND YEAR(date) = ? ORDER BY sort DESC",
+            return await query("SELECT wfh.id, u.name, u.phone_number AS phoneNumber, DATE_FORMAT(date, '%W, %d-%m-%Y') AS date, date AS sort, location, approval FROM wfh LEFT JOIN users u on u.id = wfh.user_id WHERE MONTH(date) = ? AND YEAR(date) = ? ORDER BY sort DESC",
                 [month, year])
         }catch (e){
             throw e
